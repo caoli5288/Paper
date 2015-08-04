@@ -1,4 +1,4 @@
-PaperSpigot [![Travis Status](https://travis-ci.org/PaperSpigot/PaperSpigot.svg?branch=master)](https://travis-ci.org/PaperSpigot/PaperSpigot)
+PaperSpigot [![Build Status](http://ci.mengcraft.com:8080/job/PaperSpigot/badge/icon)](http://ci.mengcraft.com:8080/job/PaperSpigot/)
 ===========
 
 High performance Spigot fork that aims to fix gameplay and mechanics inconsistencies.
