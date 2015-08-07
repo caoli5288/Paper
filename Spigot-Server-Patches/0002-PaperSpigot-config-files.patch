@@ -1,4 +1,4 @@
-From 1b119e431458fb5f6b03f6a1a622f9fe1ee37dc9 Mon Sep 17 00:00:00 2001
+From a6f18fd1775a53ad9516addbd9a75facefee5dda Mon Sep 17 00:00:00 2001
 From: Zach Brown <Zbob750@live.com>
 Date: Sat, 12 Jul 2014 19:32:01 -0500
 Subject: [PATCH] PaperSpigot config files
@@ -192,8 +192,8 @@ index 0000000..2619491
 +
 +    private static float getFloat(String path, float def)
 +    {
-+        // TODO: Figure out why getFloat() always returns the default value.
-+        return (float) getDouble(path, (double) def);
++        config.addDefault( path, def );
++        return config.getFloat( path, config.getFloat( path ) );
 +    }
 +
 +    private static int getInt(String path, int def)
@@ -281,8 +281,8 @@ index 0000000..f3bc3aa
 +
 +    private float getFloat(String path, float def)
 +    {
-+        // TODO: Figure out why getFloat() always returns the default value.
-+        return (float) getDouble(path, (double) def);
++        config.addDefault( "world-settings.default." + path, def );
++        return config.getFloat( "world-settings." + worldName + "." + path, config.getFloat( "world-settings.default." + path ) );
 +    }
 +
 +    private <T> List getList(String path, T def)
@@ -298,5 +298,5 @@ index 0000000..f3bc3aa
 +    }
 +}
 -- 
-1.9.1
+2.4.3
 
